@@ -78,8 +78,8 @@ function vp_edd_fd_download_requested()
 {
 	global $edd_options;
 
-	$download_page = $edd_options['vp_edd_fd_download_page'];
-	$filelist_page = $edd_options['vp_edd_fd_filelist_page'];
+	$download_page = isset($edd_options['vp_edd_fd_download_page']) ? $edd_options['vp_edd_fd_download_page']: 0;
+	$filelist_page = isset($edd_options['vp_edd_fd_filelist_page']) ? $edd_options['vp_edd_fd_filelist_page'] : 0;
 
 	// check if we are executing free download url
 	$download_id = isset($_GET['did']) ? $_GET['did'] : '';
@@ -252,7 +252,7 @@ function vp_edd_fd_check_registration()
 	global $wp;
 	global $edd_options;
 
-	$member_page   = $edd_options['vp_edd_fd_member_page'];
+	$member_page   = isset($edd_options['vp_edd_fd_member_page']) ? $edd_options['vp_edd_fd_member_page'] : 0;
 
 	// get redirect url
 	$redirect = '';
