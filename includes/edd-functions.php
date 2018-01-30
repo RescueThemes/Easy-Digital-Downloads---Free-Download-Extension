@@ -30,7 +30,7 @@ function vp_edd_fd_get_calculated_price($download_id)
 		$price = edd_get_download_price( $download_id );
 	}
 
-	if( edd_use_taxes() && edd_taxes_on_prices() )
+	if( edd_use_taxes() )
 		$price += edd_calculate_tax( $price );
 
 	return $price;
